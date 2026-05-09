@@ -128,7 +128,7 @@ export default function HomeContent() {
               variants={fadeUp}
               className="text-white/85 text-lg leading-relaxed mb-8 max-w-2xl"
             >
-              Product-focused professional with 4 years closing the loop between
+              Product-focused professional with 3 years closing the loop between
               user feedback, data, and engineering teams to drive platform
               adoption.
             </motion.p>
