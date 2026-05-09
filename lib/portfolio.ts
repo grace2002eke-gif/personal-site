@@ -26,7 +26,7 @@ export const stats = [
   { value: "300+", label: "Institutional Accounts" },
   { value: "75%", label: "Engagement Rate" },
   { value: "20%", label: "Onboarding Time Cut" },
-  { value: "3 yrs", label: "Product Experience" },
+  { value: "4 yrs", label: "Product Experience" },
 ];
 
 export const skillCategories = [
