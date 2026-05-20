@@ -13,6 +13,7 @@ const typeColors: Record<WorkType, string> = {
   "Proof of Concept": "bg-emerald-50 text-emerald-800 border-emerald-200",
   "Strategy": "bg-orange-50 text-orange-800 border-orange-200",
   "Research": "bg-amber-50 text-amber-800 border-amber-200",
+  "Product Concept": "bg-purple-50 text-purple-800 border-purple-200",
 };
 
 const fadeUp = {

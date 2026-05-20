@@ -1,7 +1,7 @@
 export interface WorkItem {
   slug: string;
   title: string;
-  type: "Case Study" | "MVP" | "Proof of Concept" | "Strategy" | "Research";
+  type: "Case Study" | "MVP" | "Proof of Concept" | "Strategy" | "Research" | "Product Concept";
   year: number;
   summary: string;
   coverColor: string;
@@ -104,8 +104,44 @@ export const experiences: Experience[] = [
   },
 ];
 
-// Add your real case studies here when ready
-export const workItems: WorkItem[] = [];
+export const workItems: WorkItem[] = [
+  {
+    slug: "groundwork",
+    title: "Groundwork",
+    type: "Product Concept",
+    year: 2026,
+    coverColor: "from-purple-900 to-purple-700",
+    summary: "TODO: one or two sentences describing what Groundwork is and the core problem it solves.",
+    tags: ["TODO: tag", "TODO: tag"],
+    content: {
+      intro: "TODO: Opening paragraph — set the scene. What situation or gap prompted this concept? What's the core insight?",
+      sections: [
+        {
+          heading: "The Problem",
+          body: "TODO: Describe the problem in detail. Who experiences it, how often, and what the current workarounds or gaps look like.",
+        },
+        {
+          heading: "The Concept",
+          body: "TODO: Describe your product idea. What does it do, how does it work, and what makes it different from existing solutions?",
+        },
+        {
+          heading: "Who It's For",
+          body: "TODO: Define the target user. What are their goals, frustrations, and context?",
+        },
+        {
+          heading: "How I'd Validate It",
+          body: "TODO: If this were real, how would you test the core assumptions? What would a lean MVP look like?",
+        },
+      ],
+      outcomes: [
+        "TODO: Key insight or projected outcome",
+        "TODO: Key insight or projected outcome",
+        "TODO: Key insight or projected outcome",
+      ],
+      learnings: "TODO: What this concept taught you about the problem space, the users, or your own product thinking.",
+    },
+  },
+];
 
 /* Placeholder examples — uncomment and edit to use:
 export const workItems: WorkItem[] = [
