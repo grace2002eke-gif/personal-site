@@ -3,7 +3,7 @@ import { workItems } from "@/lib/portfolio";
 import WorkDetailContent from "@/app/components/WorkDetailContent";
 
 export function generateStaticParams() {
-  return workItems.map((item) => ({ slug: item.slug }));
+  return workItems.filter((item) => item.slug !== "groundwork").map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({
