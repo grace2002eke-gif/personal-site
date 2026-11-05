@@ -20,7 +20,7 @@ export default function GroundworkCaseStudy() {
         </Link>
 
         <div className="gw-hero">
-          <div className="gw-eyebrow">Case study — Original concept</div>
+          <div className="gw-eyebrow">Case study - Original concept</div>
           <h1 className="gw-hero-title">
             Groundwork: building <em>financial futures</em> for the adulting generation
           </h1>
@@ -47,7 +47,7 @@ export default function GroundworkCaseStudy() {
           </div>
         </div>
 
-        <div className="gw-chapter-tag">Chapter 1 — Customer Discovery</div>
+        <div className="gw-chapter-tag">Chapter 1 - Customer Discovery</div>
 
         <h2>The problem nobody taught us to solve</h2>
 
@@ -198,7 +198,7 @@ export default function GroundworkCaseStudy() {
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M2 7h10M8 3l4 4-4 4" />
           </svg>
-          Up next: Chapter 2 — Product Vision
+          Up next: Chapter 2 - Product Vision
         </span>
 
       </div>

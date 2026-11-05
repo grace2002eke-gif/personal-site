@@ -6,9 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Grace Urum Eke — Product Manager",
+  title: "Grace Urum Eke - Program Manager",
   description:
-    "Product Manager at Bloomberg specializing in institutional analytics, client feedback systems, and platform adoption.",
+    "Program Manager specializing in implementation, engagement and customer success, based in San Francisco.",
 };
 
 export default function RootLayout({

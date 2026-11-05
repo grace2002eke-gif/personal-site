@@ -60,8 +60,8 @@ export const skillCategories = [
 export const experiences: Experience[] = [
   {
     company: "Bloomberg",
-    role: "Product Specialist, Portfolio Solutions",
-    period: "Mar 2025 — Present",
+    role: "Product Specialist, Risk & Portfolio Solutions",
+    period: "Mar 2025 - Aug 2026",
     description:
       "Bridging client feedback, data, and engineering teams to drive platform adoption across 300+ institutional accounts.",
     highlights: [
@@ -74,7 +74,7 @@ export const experiences: Experience[] = [
   {
     company: "Bloomberg",
     role: "Equity Specialist",
-    period: "Jun 2023 — Mar 2025",
+    period: "Jul 2023 - Mar 2025",
     description:
       "Managed 500+ client onboarding engagements for equity analytics tools, applying customer empathy to identify recurring friction points in product deployment and driving follow-up actions that measurably increased platform adoption.",
     highlights: [
@@ -87,20 +87,16 @@ export const experiences: Experience[] = [
   {
     company: "Bloomberg",
     role: "Sales and Analytics Intern",
-    period: "Jun 2022 — Aug 2022",
+    period: "Jun 2022 - Aug 2022",
     description: "Supported analytics and sales operations at Bloomberg.",
     highlights: [],
   },
   {
-    company: "Fitness Fair",
-    role: "Product Intern (Seasonal)",
-    period: "Jan 2018 — Dec 2022",
-    description:
-      "Contributed to quarterly strategy reviews and operational decisions at a Lagos-based fitness company.",
-    highlights: [
-      "Participated in quarterly strategy reviews, pitching ideas for service expansion and demographic targeting",
-      "Supported inventory tracking to inform operational decisions",
-    ],
+    company: "Greenpipe",
+    role: "Project Coordinator",
+    period: "Sep 2022 - May 2023",
+    description: "Tracked contract deliverables, supplier quotes, and lead times for oil and gas procurement projects, and reconciled purchase orders against invoices to keep delivery timelines on track.",
+    highlights: [],
   },
 ];
 
@@ -111,8 +107,8 @@ export const workItems: WorkItem[] = [
     type: "Product Concept",
     year: 2026,
     coverColor: "from-purple-900 to-purple-700",
-    summary: "TODO: one or two sentences describing what Groundwork is and the core problem it solves.",
-    tags: ["TODO: tag", "TODO: tag"],
+    summary: "A financial literacy and credit-building platform for 17 to 25 year olds. Groundwork connects real spending behaviour to structured learning and reverse-engineers a path to each user's actual financial goals.",
+    tags: ["Product Concept", "Financial Literacy", "Credit Building", "AI-built Prototype"],
     content: {
       intro: "TODO: Opening paragraph — set the scene. What situation or gap prompted this concept? What's the core insight?",
       sections: [

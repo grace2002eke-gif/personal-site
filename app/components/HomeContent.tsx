@@ -58,7 +58,7 @@ const skillClass: Record<string, string> = {
 const stats = [
   { value: "300+", label: "Institutional Accounts", icon: BarChart2 },
   { value: "75%", label: "Engagement Rate", icon: Star },
-  { value: "20%", label: "Onboarding Time Reduction", icon: ArrowRight },
+  { value: "35%", label: "Onboarding Time Reduction", icon: ArrowRight },
   { value: "3 yrs", label: "Product Experience", icon: Briefcase },
 ];
 
@@ -95,13 +95,6 @@ export default function HomeContent() {
               </motion.div>
 
               <div className="text-center sm:text-left">
-                <motion.p
-                  custom={1}
-                  variants={fadeUp}
-                  className="text-accent text-sm font-semibold tracking-widest uppercase mb-1"
-                >
-                  Product Management
-                </motion.p>
                 <motion.h1
                   custom={2}
                   variants={fadeUp}
@@ -118,7 +111,7 @@ export default function HomeContent() {
                     <MapPin className="w-3.5 h-3.5" /> San Francisco, CA
                   </span>
                   <span className="text-white/30">·</span>
-                  <span className="text-white/70 text-sm">Open to PM roles</span>
+                  <span className="text-white/70 text-sm">Open to new opportunities</span>
                 </motion.div>
               </div>
             </div>
@@ -217,7 +210,7 @@ export default function HomeContent() {
               </p>
               <p>
                 What drives me is closing the loop. Surfacing a problem is never
-                enough. I want to see it through to something measurable: a 20%
+                enough. I want to see it through to something measurable: a 35%
                 reduction in onboarding time, a 75% engagement rate on a platform
                 that was underperforming, a user story that actually reflects how
                 someone works.
@@ -228,7 +221,8 @@ export default function HomeContent() {
                 showing up somewhere that needed one more volunteer.
               </p>
               <p>
-                I&apos;m now pursuing PM roles where I can apply this foundation more
+                I&apos;m now looking for roles in implementation, program management,
+                and customer success where I can apply this foundation more
                 directly, bringing a background in finance, international business,
                 and user empathy to teams building products that matter.
               </p>
@@ -379,7 +373,7 @@ export default function HomeContent() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">
-                      BBA — International Business
+                      BBA - International Business
                     </h3>
                     <p className="text-sm text-muted-foreground">
                       The University of Texas at Austin · McCombs School of Business
@@ -409,7 +403,7 @@ export default function HomeContent() {
                   </div>
                 </div>
                 <span className="text-sm text-muted-foreground font-mono shrink-0">
-                  Aug — Dec 2022
+                  Aug - Dec 2022
                 </span>
               </motion.div>
             </div>
@@ -450,6 +444,8 @@ export default function HomeContent() {
                 </div>
                 <ul className="space-y-2">
                   {[
+                    "PMP (PMI, Oct 2026)",
+                    "Bloomberg Market Concepts (Feb 2026)",
                     "Equity & Portfolio Analysis",
                     "Bloomberg Indices",
                     "Advanced News Analytics",
@@ -482,7 +478,7 @@ export default function HomeContent() {
                     {
                       role: "SF Inclusion Ambassador & Co-Lead, Black Professional Community (BPC)",
                       org: "Bloomberg",
-                      period: "Nov 2025 — Present",
+                      period: "Nov 2025 - Aug 2026",
                       detail:
                         "An internal program championing inclusion and representation at Bloomberg SF. Organized 10+ cultural and developmental events; achieved 60-70% average departmental attendance",
                     },
