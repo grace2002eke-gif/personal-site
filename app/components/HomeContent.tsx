@@ -8,15 +8,13 @@ import {
   Linkedin,
   Phone,
   Briefcase,
-  GraduationCap,
   Star,
-  Award,
-  Users,
   BarChart2,
   MapPin,
-  ChevronRight,
+  FileText,
+  PenLine,
+  BookOpen,
 } from "lucide-react";
-import { experiences } from "@/lib/portfolio";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -31,35 +29,64 @@ const fadeUp = {
   }),
 };
 
-const skills = [
-  { label: "User Research", color: "primary" },
-  { label: "Market Research", color: "primary" },
-  { label: "Data Analysis", color: "orange" },
-  { label: "Customer Empathy", color: "orange" },
-  { label: "User Story Writing", color: "primary" },
-  { label: "Quality Assurance", color: "coral" },
-  { label: "Cross-functional Collaboration", color: "primary" },
-  { label: "Client Feedback Synthesis", color: "primary" },
-  { label: "Engagement Tracking", color: "coral" },
-  { label: "SQL", color: "orange" },
-  { label: "Excel", color: "orange" },
-  { label: "Google Sheets", color: "orange" },
-  { label: "PowerPoint", color: "coral" },
-  { label: "Notion", color: "coral" },
-  { label: "AI Tools", color: "primary" },
-];
-
-const skillClass: Record<string, string> = {
-  primary: "bg-primary/10 text-primary border-primary/20",
-  orange: "bg-accent/10 text-amber-700 border-accent/25",
-  coral: "bg-destructive/10 text-coral border-destructive/20",
-};
-
 const stats = [
   { value: "300+", label: "Institutional Accounts", icon: BarChart2 },
   { value: "75%", label: "Engagement Rate", icon: Star },
   { value: "35%", label: "Onboarding Time Reduction", icon: ArrowRight },
-  { value: "3 yrs", label: "Product Experience", icon: Briefcase },
+  { value: "3 yrs", label: "Client Solutions", icon: Briefcase },
+];
+
+const competencyGroups = [
+  {
+    title: "Implementation and delivery",
+    items: [
+      "Enterprise implementation and onboarding",
+      "Technical integrations (SFTP, APIs, SSO)",
+      "Programme delivery and governance (PMP)",
+      "Training and enablement",
+    ],
+  },
+  {
+    title: "Clients and growth",
+    items: [
+      "Customer health scoring",
+      "Adoption and engagement analytics",
+      "Expansion and account growth",
+      "Voice of customer",
+      "Stakeholder management",
+    ],
+  },
+  {
+    title: "Tools and data",
+    items: [
+      "SQL",
+      "Bloomberg Terminal",
+      "Excel and Google Sheets",
+      "AI tools (Claude, prototyping)",
+      "Notion",
+    ],
+  },
+];
+
+const exploreLinks = [
+  {
+    label: "My work",
+    href: "/work",
+    description: "Case studies and product concepts",
+    icon: BookOpen,
+  },
+  {
+    label: "Writing",
+    href: "/writing",
+    description: "Articles and thinking",
+    icon: PenLine,
+  },
+  {
+    label: "Resume",
+    href: "/resume",
+    description: "Experience and credentials",
+    icon: FileText,
+  },
 ];
 
 export default function HomeContent() {
@@ -121,7 +148,7 @@ export default function HomeContent() {
               variants={fadeUp}
               className="text-white/85 text-lg leading-relaxed mb-8 max-w-2xl"
             >
-              Product-focused professional with 3 years closing the loop between
+              Implementation and client solutions professional with 3 years closing the loop between
               user feedback, data, and engineering teams to drive platform
               adoption.
             </motion.p>
@@ -200,38 +227,23 @@ export default function HomeContent() {
               className="space-y-4 text-[1.05rem] leading-relaxed text-foreground/85"
             >
               <p>
-                I&apos;m someone who stays curious, reads widely, and tends to
-                notice how things work, and where they don&apos;t. That instinct is
-                what led me to Bloomberg, where I&apos;ve spent the last three years
-                working across data products and institutional clients, turning
-                feedback into structured insight, finding where adoption breaks
-                down, and translating friction into recommendations engineering
-                teams can actually act on.
+                I&apos;m someone who stays curious, reads widely, and tends to notice how things work, and where they don&apos;t. That instinct is what led me to Bloomberg, where I spent three years working across data products and institutional clients, turning feedback into structured insight, finding where adoption breaks down, and translating friction into recommendations engineering teams can actually act on.
               </p>
               <p>
-                What drives me is closing the loop. Surfacing a problem is never
-                enough. I want to see it through to something measurable: a 35%
-                reduction in onboarding time, a 75% engagement rate on a platform
-                that was underperforming, a user story that actually reflects how
-                someone works.
+                What drives me is closing the loop. Surfacing a problem is never enough. I want to see it through to something measurable: a 35% reduction in onboarding time, a 75% engagement rate on a platform that was underperforming, a user story that actually reflects how someone works.
               </p>
               <p>
-                That curiosity doesn&apos;t clock out either. When I&apos;m off,
-                I&apos;m probably mid-book, in a pool, exploring a new city, or
-                showing up somewhere that needed one more volunteer.
+                That curiosity doesn&apos;t clock out either. When I&apos;m off, I&apos;m probably mid-book, in a pool, exploring a new city, or showing up somewhere that needed one more volunteer. In my spare time I love to build out concepts and projects utilizing AI, which is also where Groundwork came from.
               </p>
               <p>
-                I&apos;m now looking for roles in implementation, program management,
-                and customer success where I can apply this foundation more
-                directly, bringing a background in finance, international business,
-                and user empathy to teams building products that matter.
+                I&apos;m now looking for roles in implementation, program management, and customer success, bringing a background in finance, international business, and user empathy to teams building products that matter.
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* SKILLS */}
+      {/* COMPETENCIES */}
       <section
         className="py-20 border-b border-border"
         style={{
@@ -244,7 +256,7 @@ export default function HomeContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
-            variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
           >
             <motion.div
               custom={0}
@@ -256,79 +268,23 @@ export default function HomeContent() {
                 Competencies
               </h2>
             </motion.div>
-            <div className="flex flex-wrap gap-2.5">
-              {skills.map((skill, i) => (
-                <motion.span
-                  key={skill.label}
-                  custom={i + 1}
-                  variants={fadeUp}
-                  className={`px-3.5 py-1.5 rounded-full text-sm font-medium border ${skillClass[skill.color]}`}
-                >
-                  {skill.label}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* EXPERIENCE */}
-      <section className="py-20 border-b border-border bg-background">
-        <div className="max-w-3xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-          >
-            <motion.div
-              custom={0}
-              variants={fadeUp}
-              className="flex items-center gap-2 mb-10"
-            >
-              <Briefcase className="w-4 h-4 text-coral" />
-              <h2 className="text-xs font-semibold tracking-widest uppercase text-coral">
-                Experience
-              </h2>
-            </motion.div>
-            <div className="space-y-10">
-              {experiences.map((exp, i) => (
-                <motion.div
-                  key={exp.role}
-                  custom={i + 1}
-                  variants={fadeUp}
-                  className="relative pl-6 border-l-2 border-border hover:border-primary transition-colors group"
-                >
-                  <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-primary border-2 border-background group-hover:bg-accent transition-colors" />
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                    <div>
-                      <h3 className="font-semibold text-lg text-foreground">
-                        {exp.role}
-                      </h3>
-                      <p className="text-primary font-medium text-sm">
-                        {exp.company}
-                      </p>
-                    </div>
-                    <span className="text-xs text-muted-foreground font-mono bg-muted px-2 py-0.5 rounded-full shrink-0">
-                      {exp.period}
-                    </span>
-                  </div>
-                  <p className="text-foreground/75 mb-3 text-sm leading-relaxed">
-                    {exp.description}
-                  </p>
-                  {exp.highlights.length > 0 && (
-                    <ul className="space-y-1.5">
-                      {exp.highlights.map((h) => (
-                        <li
-                          key={h}
-                          className="flex items-start gap-2 text-sm text-foreground/70"
-                        >
-                          <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-accent shrink-0" />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+            <div className="grid sm:grid-cols-3 gap-6">
+              {competencyGroups.map((group, gi) => (
+                <motion.div key={group.title} custom={gi + 1} variants={fadeUp}>
+                  <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground/50 mb-3">
+                    {group.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {group.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2 text-sm text-foreground/75"
+                      >
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </div>
@@ -336,82 +292,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* EDUCATION */}
-      <section
-        className="py-20 border-b border-border"
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(210 60% 96%) 0%, hsl(213 30% 97%) 100%)",
-        }}
-      >
-        <div className="max-w-3xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-          >
-            <motion.div
-              custom={0}
-              variants={fadeUp}
-              className="flex items-center gap-2 mb-8"
-            >
-              <GraduationCap className="w-4 h-4 text-primary" />
-              <h2 className="text-xs font-semibold tracking-widest uppercase text-primary">
-                Education
-              </h2>
-            </motion.div>
-            <div className="space-y-6">
-              <motion.div
-                custom={1}
-                variants={fadeUp}
-                className="flex justify-between items-start flex-wrap gap-2 p-5 rounded-xl bg-white border border-border hover:border-primary/30 transition-colors shadow-sm"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">
-                      BBA - International Business
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      The University of Texas at Austin · McCombs School of Business
-                    </p>
-                  </div>
-                </div>
-                <span className="text-sm text-muted-foreground font-mono shrink-0">
-                  May 2023
-                </span>
-              </motion.div>
-              <motion.div
-                custom={2}
-                variants={fadeUp}
-                className="flex justify-between items-start flex-wrap gap-2 p-5 rounded-xl bg-white border border-border hover:border-primary/30 transition-colors shadow-sm"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">
-                      Exchange Program
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Korea University, Seoul
-                    </p>
-                  </div>
-                </div>
-                <span className="text-sm text-muted-foreground font-mono shrink-0">
-                  Aug - Dec 2022
-                </span>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CERTIFICATIONS & COMMUNITY */}
+      {/* EXPLORE */}
       <section className="py-20 border-b border-border bg-background">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div
@@ -425,97 +306,36 @@ export default function HomeContent() {
               variants={fadeUp}
               className="flex items-center gap-2 mb-8"
             >
-              <Award className="w-4 h-4 text-accent" />
-              <h2 className="text-xs font-semibold tracking-widest uppercase text-amber-700">
-                Certifications & Community
+              <ArrowRight className="w-4 h-4 text-primary" />
+              <h2 className="text-xs font-semibold tracking-widest uppercase text-primary">
+                Explore
               </h2>
             </motion.div>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <motion.div
-                custom={1}
-                variants={fadeUp}
-                className="p-5 rounded-xl bg-white border border-border shadow-sm"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Award className="w-4 h-4 text-accent" />
-                  <h3 className="font-semibold text-foreground">
-                    Bloomberg Certifications
-                  </h3>
-                </div>
-                <ul className="space-y-2">
-                  {[
-                    "PMP (PMI, Oct 2026)",
-                    "Bloomberg Market Concepts (Feb 2026)",
-                    "Equity & Portfolio Analysis",
-                    "Bloomberg Indices",
-                    "Advanced News Analytics",
-                    "FTP",
-                  ].map((cert) => (
-                    <li
-                      key={cert}
-                      className="flex items-center gap-2 text-sm text-foreground/75"
+            <div className="grid sm:grid-cols-3 gap-4">
+              {exploreLinks.map((link, i) => {
+                const Icon = link.icon;
+                return (
+                  <motion.div key={link.href} custom={i + 1} variants={fadeUp}>
+                    <Link
+                      href={link.href}
+                      className="flex flex-col gap-3 p-5 rounded-lg border border-border bg-white hover:border-primary/40 hover:shadow-sm transition-all group"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                      {cert}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              <motion.div
-                custom={2}
-                variants={fadeUp}
-                className="p-5 rounded-xl bg-white border border-border shadow-sm"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Users className="w-4 h-4 text-coral" />
-                  <h3 className="font-semibold text-foreground">
-                    Community & Leadership
-                  </h3>
-                </div>
-                <ul className="space-y-3">
-                  {[
-                    {
-                      role: "SF Inclusion Ambassador & Co-Lead, Black Professional Community (BPC)",
-                      org: "Bloomberg",
-                      period: "Nov 2025 - Aug 2026",
-                      detail:
-                        "An internal program championing inclusion and representation at Bloomberg SF. Organized 10+ cultural and developmental events; achieved 60-70% average departmental attendance",
-                    },
-                    {
-                      role: "The Rotary Foundation — Paul Harris Fellow",
-                      org: "Rotary International",
-                      period: "2026",
-                      detail:
-                        "Awarded the Paul Harris Fellow in recognition of contributions to Rotary's global humanitarian mission",
-                    },
-                    {
-                      role: "McCombs Diversity Council",
-                      org: "UT Austin",
-                      period: "2021 — 2023",
-                    },
-                    {
-                      role: "Black Business Student Association",
-                      org: "UT Austin",
-                      period: "2019 — 2023",
-                    },
-                  ].map((item) => (
-                    <li key={item.role}>
-                      <p className="text-sm font-medium text-foreground/85">
-                        {item.role}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {item.org} · {item.period}
-                      </p>
-                      {"detail" in item && item.detail && (
-                        <p className="text-xs text-muted-foreground/80 mt-0.5 italic">
-                          {item.detail}
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                          {link.label}
                         </p>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {link.description}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all mt-auto" />
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
@@ -551,8 +371,7 @@ export default function HomeContent() {
               variants={fadeUp}
               className="text-white/80 mb-8 text-[1.1rem] leading-relaxed max-w-xl"
             >
-              I&apos;m always open to conversations about product, interesting
-              opportunities, or just talking through a hard problem.
+              I&apos;m always open to conversations about implementation, programmes, or a hard adoption problem.
             </motion.p>
             <motion.div
               custom={2}

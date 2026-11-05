@@ -88,7 +88,7 @@ export const experiences: Experience[] = [
     company: "Bloomberg",
     role: "Sales and Analytics Intern",
     period: "Jun 2022 - Aug 2022",
-    description: "Supported analytics and sales operations at Bloomberg.",
+    description: "Supported institutional client analytics workflows and sales pipeline tracking across Bloomberg's data products.",
     highlights: [],
   },
   {

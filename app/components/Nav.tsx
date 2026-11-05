@@ -8,6 +8,8 @@ export default function Nav() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isWork = pathname === "/work" || pathname.startsWith("/work/");
+  const isWriting = pathname === "/writing" || pathname.startsWith("/writing/");
+  const isResume = pathname === "/resume";
 
   return (
     <motion.header
@@ -43,6 +45,26 @@ export default function Nav() {
             }`}
           >
             Work
+          </Link>
+          <Link
+            href="/writing"
+            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+              isWriting
+                ? "bg-white/20 text-white"
+                : "text-white/70 hover:text-white hover:bg-white/10"
+            }`}
+          >
+            Writing
+          </Link>
+          <Link
+            href="/resume"
+            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+              isResume
+                ? "bg-white/20 text-white"
+                : "text-white/70 hover:text-white hover:bg-white/10"
+            }`}
+          >
+            Resume
           </Link>
         </nav>
       </div>
